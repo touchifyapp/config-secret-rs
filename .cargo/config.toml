@@ -1,0 +1,4 @@
+[alias]
+lint = "clippy --lib --tests --examples -p config-secret"
+
+ci-test = "test --lib --tests --examples -p config-secret"

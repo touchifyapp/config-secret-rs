@@ -123,7 +123,7 @@ impl Source for EnvironmentSecretFile {
 
         env::vars().for_each(|(key, value): (String, String)| {
             // Stop processing on error
-            if let Some(_) = error.as_ref() {
+            if error.as_ref().is_some() {
                 return;
             }
 
