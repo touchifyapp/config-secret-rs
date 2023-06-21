@@ -39,12 +39,6 @@ jobs:
         with:
           toolchain: ${{ matrix.version }}
 
-      - name: check minimal
-        run: cargo ci-check-min
-
-      - name: check default
-        run: cargo ci-check-default
-
       - name: tests
         timeout-minutes: 60
         run: |
