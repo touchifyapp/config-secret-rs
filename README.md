@@ -2,6 +2,7 @@
 
 ![Rust](https://img.shields.io/badge/rust-stable-brightgreen.svg)
 [![CI](https://github.com/touchifyapp/config-secret-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/touchifyapp/config-secret-rs/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/touchifyapp/config-secret-rs/branch/main/graph/badge.svg?token=02XS1EPT8O)](https://codecov.io/gh/touchifyapp/config-secret-rs)
 [![Crates.io](https://img.shields.io/crates/d/config-secret.svg)](https://crates.io/crates/config-secret)
 [![Docs.rs](https://docs.rs/config-secret/badge.svg)](https://docs.rs/config-secret)
 

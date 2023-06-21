@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "A source for the config crate that follows the Docker/Kubernetes secret configuration convention"
 homepage = "https://github.com/touchifyapp/config-secret-rs"
 repository = "https://github.com/touchifyapp/config-secret-rs"
+documentation = "https://docs.rs/config-secret"
 readme = "README.md"
 authors = ["Maxime LUCE <maxime@touchify.io>"]
 keywords = ["config", "configuration", "settings", "env", "environment", "kubernetes", "k8s", "docker", "container", "containerd", "secret"]
