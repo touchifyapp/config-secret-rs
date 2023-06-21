@@ -16,6 +16,14 @@ fn test_prefix_is_removed_from_key() {
 }
 
 #[test]
+fn test_prefix_from_default() {
+    temp_env::with_var("B_A_FILE", Some(get_test_file("config.json")), || {
+        let source = EnvironmentSecretFile::default().prefix("B");
+        assert!(source.collect().unwrap().contains_key("a"));
+    })
+}
+
+#[test]
 fn test_prefix_with_variant_forms_of_spelling() {
     temp_env::with_var("a_A_FILE", Some(get_test_file("config.json")), || {
         let source = EnvironmentSecretFile::with_prefix("a");
@@ -121,6 +129,32 @@ fn test_full_pattern_behavior() {
         assert!(source.collect().unwrap().contains_key("server"));
         assert!(source.collect().unwrap().contains_key("redis"));
     })
+}
+
+#[test]
+#[should_panic]
+fn test_key_nofile() {
+    temp_env::with_var(
+        "E_NO_FILE",
+        Some(get_test_file("not-available-config.yaml")),
+        || {
+            let source = EnvironmentSecretFile::with_prefix("E").separator("_");
+            source.collect().unwrap();
+        },
+    )
+}
+
+#[test]
+#[should_panic]
+fn test_full_pattern_nofile() {
+    temp_env::with_var(
+        "F_FILE",
+        Some(get_test_file("not-available-config.yaml")),
+        || {
+            let source = EnvironmentSecretFile::with_prefix("F").separator("_");
+            source.collect().unwrap();
+        },
+    )
 }
 
 #[test]
