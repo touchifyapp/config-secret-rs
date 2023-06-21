@@ -1,0 +1,9 @@
+server:
+    host: 0.0.0.0
+    port: 5000
+
+redis:
+    nodes:
+        - redis://10.0.0.1:6379
+        - redis://10.0.0.2:6379
+        - redis://10.0.0.3:6379

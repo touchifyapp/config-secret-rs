@@ -17,3 +17,5 @@ config = { version = ">=0.13", default-features = false }
 
 [dev-dependencies]
 config = { version = "0.13", features = ["json", "yaml"] }
+serde = "1"
+temp-env = "0.3"
