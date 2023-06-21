@@ -1,0 +1,19 @@
+[package]
+name = "config-secret"
+version = "0.1.0"
+description = "A new source for the config crates that follow the Docker/Kubernetes convention"
+homepage = "https://github.com/touchifyapp/rust-config-secret"
+repository = "https://github.com/touchifyapp/rust-config-secret"
+readme = "README.md"
+keywords = ["config", "configuration", "settings", "env", "environment", "kubernetes", "k8s", "docker", "container", "containerd", "secret"]
+categories = ["config"]
+license = "MIT"
+edition = "2021"
+
+
+[dependencies]
+config = { version = ">=0.13", default-features = false }
+
+
+[dev-dependencies]
+config = { version = "0.13", features = ["json", "yaml"] }
