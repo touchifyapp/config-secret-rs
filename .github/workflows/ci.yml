@@ -39,8 +39,12 @@ jobs:
         with:
           toolchain: ${{ matrix.version }}
 
-      - name: tests
-        timeout-minutes: 60
-        run: |
-          cargo lint
-          cargo ci-test
+      - name: lint
+        if: matrix.version == 'stable'
+        run: cargo lint
+
+      - name: test
+        run: cargo ci-test
+
+      - name: build
+        run: cargo build

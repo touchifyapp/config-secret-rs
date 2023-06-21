@@ -2,3 +2,4 @@
 lint = "clippy --lib --tests --examples -p config-secret"
 
 ci-test = "test --lib --tests --examples -p config-secret"
+ci-build = "build --lib -p config-secret"
